@@ -1,0 +1,75 @@
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(114, 201, 213);
+    background: linear-gradient(90deg, rgb(129, 215, 236) 0%, rgb(126, 228, 241) 39%, rgb(50, 183, 209) 100%);
+    margin: 5%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px 5px;
+    display: inline-block;
+    transition: all 0.5s;
+}
+
+a:hover {
+    background-color: rgba(83, 78, 78, 0.3);
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    border: 1px black solid;
+    background-color: rgba(207, 197, 197, 0.3);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    flex: 1 1 100%;
+}
+
+.icon {
+    flex: 1;
+}
+
+@media only screen and (min-width: 600px) {
+    .item {
+        flex: 1 1 50%;
+    }
+
+    .icon {
+        flex: 1;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    ul {
+        flex-wrap: nowrap;
+    }
+
+    li {
+        /* this endables the hover background color extend to the border end when viewed on screen above 1000px */
+        display: flex; 
+        flex: 1;
+    }
+
+    .icon {
+        flex: 1 1 0;
+    }
+
+    .item {
+        flex: 3 1 0;
+    }
+}
